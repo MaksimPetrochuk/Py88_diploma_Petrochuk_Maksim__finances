@@ -1,0 +1,28 @@
+{% extends 'consumer/sign_layout.html' %}
+
+{% block content %}
+    <div class="registration-container">
+        <h2>Sign up</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="id_username">Username:</label>
+            <input type="text" name="username" id="id_username" required>
+
+            <label for="id_email">Email:</label>
+            <input type="email" name="email" id="id_email" required>
+
+            <label for="id_password">Password:</label>
+            <div class="password-container">
+                <input type="password" name="password" id="id_password" required>
+                <div class="password-toggle" onclick="togglePasswordVisibility('id_password', 'password-toggle')"><i class="fas fa-eye"></i></div>
+            </div>
+
+            <label for="id_password_confirm">Password Confirm:</label>
+            <input type="password" name="password_confirm" id="id_password_confirm" required>
+
+            <button type="submit">Sign up</button>
+        </form>
+
+        <p>Already registered? <a href="{% url 'sign_in' %}">Sign in</a> or back to <a href="{% url 'home' %}">Main page</a></p>
+    </div>
+{% endblock %}
