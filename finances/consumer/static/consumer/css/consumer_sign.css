@@ -1,0 +1,106 @@
+body.sign{
+    background-image: url('https://top-fon.com/uploads/posts/2022-09/1663557928_94-top-fon-com-p-fon-zastavka-serii-foto-144.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.registration-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    height: 700px;
+}
+
+.login {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    height: 700px;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    height: 40px;
+}
+
+.password-container div i {
+    vertical-align: 20%;
+}
+
+.password-toggle {
+    vertical-align: center;
+    cursor: pointer;
+    margin-left: -30px;
+    font-size: 22px;
+    color: #007bff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+    font-size: 30px;
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+#id_remember_me {
+    width: 30px;
+    height: 30px;
+    vertical-align: center;
+}
+
+button {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 30px;
+}
+
+a {
+    font-size: 30px;
+    color: #007bff;
+    text-decoration: none;
+}
