@@ -1,0 +1,18 @@
+{% extends 'consumer_profile/layout.html' %}
+
+{% block aside %}
+    <ul>
+        <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i>Home</li></a>
+        <a href="{% url 'about' %}"><li><i class="fa-solid fa-address-card"></i>About</li></a>
+        <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-address-book"></i>Contacts</li></a>
+        <a href="{% url 'settings' %}"><li><i class="fa-solid fa-gear"></i>Settings</li></a>
+        <a href="{% url 'logout' %}?next=/"><li><i class="fa-solid fa-lock"></i></i>Logout</li></a>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <p>Nice to meet you, {{ user.username }}!</p>
+        <p>Your default currency: {{ user.default_currency }}</p>
+    </main>
+{% endblock %}

@@ -9,20 +9,9 @@
     <title>Finances</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
-    <link rel="stylesheet" href="{% static 'consumer/css/consumer_sign.css'%}">
+    <link rel="stylesheet" href="{% static 'consumer/css/consumer.css'%}">
 </head>
 <body class="sign">
     {% block content %}
     {% endblock %}
-    <script>
-    function togglePasswordVisibility(passwordId) {
-        var passwordInput = document.getElementById(passwordId);
-
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-        } else {
-            passwordInput.type = 'password';
-        }
-    }
-    </script>
 </body>
