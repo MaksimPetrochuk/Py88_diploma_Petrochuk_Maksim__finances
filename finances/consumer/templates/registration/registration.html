@@ -25,9 +25,17 @@
 
             <button type="submit">Register</button>
         </form>
-
         <p>Already registered? <a href="{% url 'login' %}">Login</a> or back to <a href="{% url 'home' %}">Main page</a></p>
     </div>
+    <div class="actionlist">
+        <form method="POST">
+            <aside>
+                <h1>Error list</h1>
+                    {{ form.errors }}
+            </aside>
+        </form>
+    </div>
+
     <script>
     function togglePasswordVisibility(passwordId) {
         var passwordInput = document.getElementById(passwordId);

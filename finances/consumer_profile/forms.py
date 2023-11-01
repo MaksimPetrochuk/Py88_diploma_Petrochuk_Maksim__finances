@@ -20,14 +20,14 @@ class CreateCostGroupForm(ModelForm):
 
     def save(self, commit=True):
         group = super(CreateCostGroupForm, self).save(commit=False)
-        group.default_currency = self.clean_data['default_currency']
+        group.cost_group_name = self.clean_data['cost_group_name']
         if commit:
             group.save()
 
 class CreateCostRecordForm(ModelForm):
     class Meta:
         model = CostRecord
-        fields = ['cost', 'currency']
+        fields = ['cost_group', 'cost', 'currency', 'time']
 
     def save(self, commit=True):
         record = super(CreateCostRecordView, self).save(commit=False)

@@ -14,8 +14,8 @@ aside {
 }
 
 aside img {
-    width: 375px;
-    height: 137px;
+    width: 384px;
+    height: 128px;
     align-items: center;
     float: left;
 }
@@ -52,7 +52,8 @@ main .features {
     width: 81%;
 }
 main .features h1 {
-    font-size: 150px;
+    color: orange;
+    font-size: 130px;
     margin-bottom: 60px;
     float: unset;
 }

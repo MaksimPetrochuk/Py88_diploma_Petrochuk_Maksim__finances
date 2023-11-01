@@ -15,16 +15,19 @@
             </div>
 
             <button type="submit">Login</button>
-
-            {{ form.errors }}
         </form>
-        <section>
-            <label for="id_remember_me">Remember Me:</label>
-            <input type="checkbox" name="remember_me" id="id_remember_me">
-        </section>
+        <h3></h3>
         <p>Don't have an account? <a href="{% url 'registration' %}">Registration</a></p>
         <p>Forgot your password? <a href="{% url 'password_reset' %}">Reset password</a></p>
         <p>Or back to <a href="{% url 'home' %}">Main page</a></p>
+    </div>
+    <div class="actionlist">
+        <form method="POST">
+            <aside>
+                <h1>Error list</h1>
+                    {{ form.errors }}
+            </aside>
+        </form>
     </div>
     <script>
     function togglePasswordVisibility(passwordId) {

@@ -1,0 +1,33 @@
+{% extends 'consumer_profile/layout.html' %}
+
+{% block aside %}
+    <ul>
+        <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i>Home</li></a>
+        <a href="{% url 'about' %}"><li><i class="fa-solid fa-address-card"></i>About</li></a>
+        <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-address-book"></i>Contacts</li></a>
+        <a href="{% url 'main' %}"><li><i class="fa-solid fa-user"></i>Profile</li></a>
+        <a href="{% url 'settings' %}"><li><i class="fa-solid fa-gear"></i>Settings</li></a>
+        <a href="{% url 'logout' %}?next=/"><li><i class="fa-solid fa-lock"></i></i>Logout</li></a>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div>
+        <h2>Record adding</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="id_cost_group_name">Choose cost group:</label><br>
+                <p><input type="text" name="cost_group_name" id="id_cost_group_name" required></p>
+                <label for="cost">Input cost:</label><br>
+                <p><input type="number" name="cost" id="cost" required></p>
+                <label for="currency">Choose currency:</label><br>
+                <p><input type="text" name="currency" id="currency" required></p>
+                <label for="time">Choose date:</label><br>
+                <p><input type="date" name="time" id="time" required></p>
+
+                <p><button class="btn btn-warning" type="submit">Create</button></p>
+            </form>
+        </div>
+    </main>
+{% endblock %}

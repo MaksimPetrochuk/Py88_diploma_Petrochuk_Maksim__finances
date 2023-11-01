@@ -5,6 +5,7 @@
         <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i>Home</li></a>
         <a href="{% url 'about' %}"><li><i class="fa-solid fa-address-card"></i>About</li></a>
         <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-address-book"></i>Contacts</li></a>
+        <a href="{% url 'main' %}"><li><i class="fa-solid fa-user"></i>Profile</li></a>
         <a href="{% url 'settings' %}"><li><i class="fa-solid fa-gear"></i>Settings</li></a>
         <a href="{% url 'logout' %}?next=/"><li><i class="fa-solid fa-lock"></i></i>Logout</li></a>
     </ul>
@@ -12,16 +13,15 @@
 
 {% block content %}
     <main>
-        <p>Nice to meet you, {{ user.username }}!</p>
-        <p>Your default currency: {{ user.default_currency }}</p><br>
-        <div class="features">
-            <button class="btn btn-warning" onclick="location.href='{% url 'settings' %}'">Settings</button>
-            <br>
-            <button class="btn btn-warning" onclick="location.href='{% url 'create-cost-group' %}'">Create cost group</button>
-            <br>
-            <button class="btn btn-warning" onclick="location.href='{% url 'create-cost-record' %}'">Create cost record</button>
-            <br>
+        <div>
+        <h2>Group adding</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="id_cost_group_name">Input cost group name:</label><br>
+                <p><input type="cost_group_name" name="cost_group_name" id="id_cost_group_name" required></p>
+                <p>The cost groups that you'll make will be shown only for you. Also, you can see cost groups that were added by admin.</p>
+                <p><button class="btn btn-warning" type="submit">Create</button></p>
+            </form>
         </div>
-
     </main>
 {% endblock %}

@@ -9,7 +9,7 @@ class Consumer(AbstractUser):
     default_currency = models.ForeignKey(Currency, on_delete=models.CASCADE, default=9624)
 
     def __str__(self):
-        return self.username
+        return self.id
 
     class Meta:
         verbose_name = 'Consumer'
@@ -33,10 +33,10 @@ class CostRecord(models.Model):
     cost_group = models.ForeignKey(CostGroup, on_delete=models.CASCADE)
     currency = models.ForeignKey(Currency, on_delete=models.CASCADE)
     cost = models.DecimalField(max_digits=10, decimal_places=2)
-    time = models.DateTimeField(auto_now_add=True)
+    time = models.DateTimeField(auto_now_add=False)
 
     def __str__(self):
-        return f"Note for {self.consumer.username}"
+        return f"Record for {self.consumer.username}, from {self.time}"
 
     class Meta:
         verbose_name = 'CostRecord'
