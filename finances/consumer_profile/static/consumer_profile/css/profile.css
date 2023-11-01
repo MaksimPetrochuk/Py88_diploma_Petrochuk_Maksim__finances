@@ -3,6 +3,7 @@ body {
 }
 
 aside {
+    overflow: auto;
     float: right;
     background: #1b1b1b;
     width: 19%;
@@ -14,8 +15,8 @@ aside {
 }
 
 aside img {
-    width: 375px;
-    height: 137px;
+    width: 384px;
+    height: 128px;
     align-items: center;
     float: left;
 }
@@ -67,23 +68,12 @@ main a:hover {
 main .features {
     float: left;
     color: white;
-    margin-top: 50px;
     text-align: center;
     width: 81%;
 }
-main .features h1 {
-    font-size: 150px;
-    margin-bottom: 60px;
-    float: unset;
-}
-main .features p {
-    max-width: 100%;
-    margin: 10px;
-    font-size: 50px;
-    float: inherit;
-}
+
 main .features button {
-    margin-top: 30px;
+    margin: 30px;
     font-size: 40px;
     transition: transform .3s ease;
 }
@@ -91,4 +81,25 @@ main .features button:hover {
     color: red;
     text-decoration: none;
     transform: scale(1.05);
+}
+
+main h2 {
+    color: orange;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 150px;
+}
+
+main label {
+    display: block;
+    text-align: center;
+    color: lightseagreen;
+    padding-top: 10px;
+    font-size: 50px;
+}
+
+main input {
+    height: 50px;
+    width: 60%;
+    font-size: 40px;
 }

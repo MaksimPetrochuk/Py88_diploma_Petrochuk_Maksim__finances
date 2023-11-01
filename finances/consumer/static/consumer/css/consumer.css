@@ -1,5 +1,5 @@
 body.sign{
-    background-image: url('https://top-fon.com/uploads/posts/2022-09/1663557928_94-top-fon-com-p-fon-zastavka-serii-foto-144.jpg');
+    background-image: url('https://images.wallpaperscraft.com/image/single/line_obliquely_background_69473_1680x1050.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,9 +10,29 @@ body.sign{
     height: 100vh;
 }
 
+.actionlist {
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 700px;
+}
+
+.actionlist aside h1 {
+    text-align: center;
+}
+
 h2 {
     font-size: 70px;
     text-align: center;
+}
+
+h3 {
+    margin-top: 70px;
 }
 
 .registration-container {
