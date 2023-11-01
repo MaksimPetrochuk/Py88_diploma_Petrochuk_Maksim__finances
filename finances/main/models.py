@@ -71,4 +71,33 @@ class Currency(models.Model):
         conn.commit()
         conn.close()
 
+    @staticmethod
+    def currency_choices():
+        currency_choices = []
+
+        currency_list = Currency.objects.all()
+
+        import os, sys
+        sys.path.append('/home/mk/Desktop/Py88_diploma_Petrochuk_Maksim__finances/finances')
+        os.environ['DJANGO_SETTINGS_MODULE'] = 'finances.settings'
+        import django
+        django.setup()
+
+        conn = psycopg2.connect(database="finances", user="finances_admin", password="peklo5gd!", host="localhost")
+        cursor = conn.cursor()
+
+        for i in range(0, len(currency_list)):
+            currency = currency_list[i]
+
+            cursor.execute(
+                "SELECT * FROM main_currency WHERE currency_name = VALUES %s", currency
+            )
+
+            res = cursor.fetchone()
+            print(res)
+
+        return currency_choices
+
+
 Currency.import_currency_data()
+# Currency.currency_choices()

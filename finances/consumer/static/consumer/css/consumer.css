@@ -16,6 +16,7 @@ h2 {
 }
 
 .registration-container {
+    vertical-align: center;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
